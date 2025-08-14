@@ -14,7 +14,7 @@ const mailOptions = {
   from: 'paypal.services.ion@gmail.com',    // Sender address
   to: 'sheunrex@gmail.com',      // Recipient address
   subject: 'Test Email from Node.js', // Subject line
-  text: 'Hello, this is a test email sent from Node.js using Gmail SMTP!', // Plain text body
+  text: 'Hello, this is a confirmed email sent from Node.js using Gmail SMTP!', // Plain text body
   // html: '<b>Hello, this is a test email!</b>' // Optional: HTML body
 };
 
