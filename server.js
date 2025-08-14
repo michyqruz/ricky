@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'paypal.services.ion@gmail.com', // Replace with your Gmail address
-    pass: 'nasbcfvdlcvaptyz'      // Replace with your Gmail App Password
+    pass: 'nasbcfvdlcvapty'      // Replace with your Gmail App Password
   }
 });
 
