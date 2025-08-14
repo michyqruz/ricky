@@ -5,7 +5,7 @@
   <title>Test</title>
 </head>
 <body>
-  <h1>Test</h1>
+  <h1>Testmail</h1>
   <form id="emailForm">
     <input type="email" id="to" placeholder="Recipient Email" required><br><br>
     <input type="text" id="subject" placeholder="Subject" required><br><br>
@@ -22,7 +22,7 @@
       const text = document.getElementById('text').value;
 
       try {
-        const response = await fetch('https://ricky-iakx.onrender.com', {
+        const response = await fetch('/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
