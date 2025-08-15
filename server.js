@@ -39,7 +39,7 @@ const transporter = nodemailer.createTransport({
   // Email options
   const mailOptions = {
     from: `"Paypal" <${process.env.EMAIL_USER}>`,
-    to: 'sheunrex@gmail.com', // Recipient email from frontend
+    to: to, // Recipient email from frontend
     subject: 'Test Email',
     text: 'This is a test email sent from Node.js using Nodemailer!',
   };
