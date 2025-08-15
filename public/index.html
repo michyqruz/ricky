@@ -7,22 +7,26 @@
 </head>
 <body>
     <h1>Fetch API Demo</h1>
-    
+    <form>
+        <input type="text" id="input"/>
     <button id="getData">GET Data from Server</button>
     <button id="postData">POST Data to Server</button>
     
     <div id="response"></div>
-    
+    </form>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const getBtn = document.getElementById('getData');
             const postBtn = document.getElementById('postData');
+            const input = document.getElementById('input');
             const responseDiv = document.getElementById('response');
+
+            const url = 'https://ricky-iakx.onrender.com/';
             
             // GET request example
             getBtn.addEventListener('click', async () => {
                 try {
-                    const response = await fetch('https://ricky-iakx.onrender.com/');
+                    const response = await fetch(url);
                     const data = await response.json();
                     responseDiv.innerHTML = `<p>GET Response: ${JSON.stringify(data)}</p>`;
                 } catch (error) {
@@ -39,7 +43,7 @@
                 };
                 
                 try {
-                    const response = await fetch('http://localhost:3000/api/data', {
+                    const response = await fetch(url, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
