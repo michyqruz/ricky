@@ -1,26 +1,28 @@
-// server.js
 const express = require('express');
-const cors = require('cors'); // To handle Cross-Origin Resource Sharing
+const cors = require('cors');
+const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Render provides the PORT environment variable
 
 // Middleware
-app.use(cors()); // Enable CORS for all routes
-app.use(express.json()); // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
 
-// Sample GET endpoint
+// Serve static files from React/Vue/HTML frontend if you have one
+app.use(express.static(path.join(__dirname, 'public')));
+
+// API Routes
 app.get('/api/data', (req, res) => {
-    res.json({ message: 'Hello from the server!' });
+    res.json({ message: 'Hello from Render server!' });
 });
 
-// Sample POST endpoint
 app.post('/api/data', (req, res) => {
     console.log('Received data:', req.body);
-    res.json({ status: 'Data received', data: req.body });
+    res.json({ status: 'Data received on Render', data: req.body });
 });
 
-// Start the server
+// Start server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
