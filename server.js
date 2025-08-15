@@ -1,4 +1,5 @@
 const express = require('express');
+const nodemailer = require('nodemailer');
 const cors = require('cors');
 const path = require('path');
 
@@ -20,6 +21,43 @@ app.get('/api/data', (req, res) => {
 app.post('/api/data', (req, res) => {
     console.log('Received data:', req.body);
     res.json({ status: 'Data received on Render', data: req.body });
+});
+
+// Nodemailer transporter configuration
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // Use your email service (e.g., Gmail, Outlook)
+  auth: {
+    user: procees.env.EMAIL_USER, // Replace with your email
+    pass: process.env.EMAIL_PASS // Replace with your app-specific password or email password
+  },
+});
+
+// API endpoint to send email
+app.post('/send-email', (req, res) => {
+  const { to } = req.body; // Get recipient email from frontend
+
+  // Validate email
+  if (!to || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) {
+    return res.status(400).json({ error: 'Invalid email address' });
+  }
+
+  // Email options
+  const mailOptions = {
+    from: 'your-email@gmail.com', // Sender email
+    to: to, // Recipient email from frontend
+    subject: 'Test Email',
+    text: 'This is a test email sent from Node.js using Nodemailer!',
+  };
+
+  // Send email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      return res.status(500).json({ error: 'Failed to send email' });
+    }
+    console.log('Email sent:', info.response);
+    res.status(200).json({ message: 'Email sent successfully' });
+  });
 });
 
 // Start server
