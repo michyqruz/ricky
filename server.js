@@ -18,15 +18,6 @@ app.get('/api/data', (req, res) => {
     res.json({ message: 'Hello from Render server!' });
 });
 
-// Nodemailer transporter configuration
-const transporter = nodemailer.createTransport({
-  service: 'gmail', // Use your email service (e.g., Gmail, Outlook)
-  auth: {
-    user: procees.env.EMAIL_USER, // Replace with your email
-    pass: process.env.EMAIL_PASS // Replace with your app-specific password or email password
-  },
-});
-
 // API endpoint to send email
 app.post('/api/data', (req, res) => {
   const { to } = req.body; // Get recipient email from frontend
@@ -35,6 +26,15 @@ app.post('/api/data', (req, res) => {
   if (!to || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
+
+// Nodemailer transporter configuration
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: procees.env.EMAIL_USER, 
+    pass: process.env.EMAIL_PASS 
+  },
+});
 
   // Email options
   const mailOptions = {
