@@ -18,11 +18,6 @@ app.get('/api/data', (req, res) => {
     res.json({ message: 'Hello from Render server!' });
 });
 
-app.post('/api/data', (req, res) => {
-    console.log('Received data:', req.body);
-    res.json({ status: 'Data received on Render', data: req.body });
-});
-
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Use your email service (e.g., Gmail, Outlook)
@@ -33,7 +28,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // API endpoint to send email
-app.post('/send-email', (req, res) => {
+app.post('/api/data', (req, res) => {
   const { to } = req.body; // Get recipient email from frontend
 
   // Validate email
