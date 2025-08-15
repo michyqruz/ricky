@@ -7,18 +7,14 @@
 </head>
 <body>
     <h1>Fetch API Demo</h1>
-    <form>
-        <input type="text" id="input"/>
     <button id="getData">GET Data from Server</button>
     <button id="postData">POST Data to Server</button>
     
     <div id="response"></div>
-    </form>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const getBtn = document.getElementById('getData');
             const postBtn = document.getElementById('postData');
-            const input = document.getElementById('input');
             const responseDiv = document.getElementById('response');
 
             const url = 'https://ricky-iakx.onrender.com/';
