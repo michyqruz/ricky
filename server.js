@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Use the port assigned by Render or default to 3000 for local development
-const port = 3000;
+const port = process.env.PORT || 4000;
 
 // Middleware to parse JSON and form data
 app.use(bodyParser.json());
