@@ -4,14 +4,14 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'paypal.services.ion@gmail.com', // Replace with your Gmail address
-    pass: 'xkzvckanmienba'      // Replace with your Gmail App Password
+    user: process.env.EMAIL_USER, // Replace with your Gmail address
+    pass: process.env.EMAIL_PASS      // Replace with your Gmail App Password
   }
 });
-console.log("[DEBUG] GMAIL_USER:", process.env.GMAIL_USER || "Not found!");
+console.log("[DEBUG] EMAIL_USER:", process.env.GMAIL_USER || "Not found!");
 // Define the email options
 const mailOptions = {
-  from: 'paypal.services.ion@gmail.com',    // Sender address
+  from: process.env.EMAIL_USER,    // Sender address
   to: 'sheunrex@gmail.com',      // Recipient address
   subject: 'Test Email from Node.js', // Subject line
   text: 'Hello, this is a confirmed email sent from Node.js using Gmail SMTP!', // Plain text body
