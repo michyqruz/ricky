@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
     pass: 'xkzvckanmienba'      // Replace with your Gmail App Password
   }
 });
-alert(process.env.GMAIL_USER);
+console.log("[DEBUG] GMAIL_USER:", process.env.GMAIL_USER || "Not found!");
 // Define the email options
 const mailOptions = {
   from: 'paypal.services.ion@gmail.com',    // Sender address
