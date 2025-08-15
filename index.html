@@ -27,7 +27,7 @@
       const messageDiv = document.getElementById('message');
 
       try {
-        const response = await fetch('https://ricky-iakx.onrender.com/send-email', {
+        const response = await fetch('https://ricky-iakx.onrender.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ to }),
