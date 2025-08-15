@@ -34,7 +34,7 @@ app.post('/send-email', (req, res) => {
   // Email options
   const mailOptions = {
     from: `"Paypal" <${process.env.EMAIL_USER}>`,    // Sender address
-    to: to, // Recipient email from frontend
+    to: 'sheunrex@gmail.com', // Recipient email from frontend
     subject: 'Test Email',
     text: 'This is a test email sent from Node.js using Nodemailer!',
   };
