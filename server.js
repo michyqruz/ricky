@@ -38,10 +38,28 @@ const transporter = nodemailer.createTransport({
 
   // Email options
   const mailOptions = {
-    from: `"Paypal" <${process.env.EMAIL_USER}>`,
+    from: `"Ricky" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Test Email',
-    text: 'This is a test email sent from Node.js using Nodemailer!',
+    subject: 'Action Needed',
+    text: `Welcome to Our Newsletter\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
+    html: `
+  <div style="display: none; max-height: 0; overflow: hidden;">
+    Welcome to our newsletter! View our latest updates and images.
+  </div>
+  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px;">
+    <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Welcome to Our Newsletter</h1>
+    <p style="color: #555; font-size: 16px; line-height: 1.5;">
+      Thank you for subscribing! Here's a test email with some thumbnail images.
+    </p>
+    <div style="margin: 20px 0;">
+      <img src="https://example.com/images/thumbnail1.jpg" alt="Thumbnail 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
+      <img src="https://example.com/images/thumbnail2.jpg" alt="Thumbnail 2" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
+    </div>
+    <p style="color: #555; font-size: 14px;">
+      For more updates, visit our website!
+    </p>
+  </div>
+`
   };
 
   // Send email
