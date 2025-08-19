@@ -20,12 +20,15 @@ app.get('/api/data', (req, res) => {
 
 // API endpoint to send email
 app.post('/api/data', (req, res) => {
-  const { to } = req.body; // Get recipient email from frontend
+  const { to, name } = req.body; // Get recipient email from frontend
 
   // Validate email
   if (!to || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
+
+    // Sanitize name; use default if not provided
+  const sanitizedName = name && name.trim() ? name.trim() : 'Subscriber';
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
@@ -41,7 +44,7 @@ const transporter = nodemailer.createTransport({
     from: `"Ricky" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
     subject: 'Action Needed',
-    text: `Welcome to Our Newsletter\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
+    text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
   <div style="display: none; max-height: 0; overflow: hidden;">
     Welcome to our newsletter! View our latest updates and images.
@@ -49,7 +52,7 @@ const transporter = nodemailer.createTransport({
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px;">
     <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Welcome to Our Newsletter</h1>
     <p style="color: #555; font-size: 16px; line-height: 1.5;">
-      Thank you for subscribing! Here's a test email with some thumbnail images.
+      Dear ${sanitizedName}. Thank you for subscribing! Here's a test email with some thumbnail images.
     </p>
     <div style="margin: 20px 0;">
       <img src="https://share.google/xiPfC0kQaU90LbBS2" alt="Thumbnail 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
