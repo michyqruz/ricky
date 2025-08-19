@@ -16,6 +16,7 @@
   <h1>Testmail</h1>
   <form id="emailForm">
     <input type="email" id="to" name="to" placeholder="Recipient Email" required>
+    <input type="email" id="name" name="name" placeholder="Recipient Name" required>
     <button type="submit">Send</button>
   </form>
   <div id="message"></div>
@@ -24,6 +25,7 @@
        document.getElementById('emailForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const to = document.getElementById('to').value;
+      const name = document.getElementById('name').value;
       const messageDiv = document.getElementById('message');
       const url = 'https://ricky-iakx.onrender.com/api/data';
       
@@ -32,7 +34,7 @@
         const response = await fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ to }),
+          body: JSON.stringify({ to, name }),
         });
         const result = await response.json();
 
