@@ -52,10 +52,10 @@ const transporter = nodemailer.createTransport({
       Thank you for subscribing! Here's a test email with some thumbnail images.
     </p>
     <div style="margin: 20px 0;">
-      <img src="https://example.com/images/thumbnail1.jpg" alt="Thumbnail 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
-      <img src="https://example.com/images/thumbnail2.jpg" alt="Thumbnail 2" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
+      <img src="https://share.google/xiPfC0kQaU90LbBS2" alt="Thumbnail 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
+      <img src="https://cdn.shopify.com/s/files/1/0522/0021/0585/files/Rose.jpg" alt="Thumbnail 2" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
     </div>
-    <p style="color: #555; font-size: 14px;">
+    <p style="color: #555; text-align: left; font-size: 14px;">
       For more updates, visit our website!
     </p>
   </div>
