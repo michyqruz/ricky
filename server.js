@@ -51,14 +51,11 @@ const transporter = nodemailer.createTransport({
   </div>
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px;">
     <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Welcome to Our Newsletter</h1>
-    <p style="color: #555; font-size: 16px; line-height: 1.5;">
+    <p style="color: #555; font-size: 16px; text-align: left; line-height: 1.5;">
       Dear ${sanitizedName}. Thank you for subscribing! Here's a test email with some thumbnail images.
     </p>
-    <div style="margin: 20px 0;">
-      <img src="https://share.google/xiPfC0kQaU90LbBS2" alt="Thumbnail 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
-      <img src="https://cdn.shopify.com/s/files/1/0522/0021/0585/files/Rose.jpg" alt="Thumbnail 2" style="width: 100px; height: 100px; margin: 10px; border-radius: 5px;">
-    </div>
-    <p style="color: #555; text-align: left; font-size: 14px;">
+    <a href="https://millxore.github.io/start/" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-size: 16px; margin: 10px 0;">Visit Our Website</a>
+    <p style="color: #555; font-size: 14px;">
       For more updates, visit our website!
     </p>
   </div>
