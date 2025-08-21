@@ -46,15 +46,16 @@ const transporter = nodemailer.createTransport({
     subject: 'Action Needed',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
-  <div style="display: none; max-height: 0; overflow: hidden;">
+    <div style="display: none; max-height: 0; overflow: hidden;">
     Welcome to our newsletter! View our latest updates and images.
   </div>
-  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px;">
-    <h1 style="color: #333; font-size: 26px; margin-bottom: 20px;">Welcome to Our Newsletter</h1>
+  <div style="font-family: Arial, sans-serif; color: #000000; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f3f4f2;">
+    <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #333; font-size: 26px; margin: 30px 0;">Welcome to Our Newsletter</h1>
     <p style="color: #555; font-size: 18px; text-align: left; line-height: 1.5;">
-      Dear ${sanitizedName}. Thank you for subscribing! Here's a test email with some thumbnail images.
+      Dear ${sanitizedName}. Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
     </p>
-    <a href="https://millxore.github.io/start/" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-size: 16px; margin: 10px 0;">Visit Our Website</a>
+    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 10px; font-size: 16px; margin: 10px 0;">Visit Our Website</a>
     <p style="color: #555; font-size: 14px;">
       For more new updates, visit our website!
     </p>
