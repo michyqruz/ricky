@@ -56,7 +56,7 @@ const transporter = nodemailer.createTransport({
     </p>
     <a href="https://millxore.github.io/start/" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-size: 16px; margin: 10px 0;">Visit Our Website</a>
     <p style="color: #555; font-size: 14px;">
-      For more updates, visit our website!
+      For more new updates, visit our website!
     </p>
   </div>
 `
