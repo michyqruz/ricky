@@ -47,13 +47,13 @@ const transporter = nodemailer.createTransport({
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
   <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
-  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f5f5f5;">
+  <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f5f5f5;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-    <h1 style="font-size: 36px; margin: 40px 0; font-weight: 900;">Welcome to Our Newsletter</h1>
-    <p style="font-size: 20px; text-align: left; line-height: 1.5;">
+    <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">Welcome to Our Newsletter</h1>
+    <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
         Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
     </p>
-    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
+    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Explore</a>
   </div>
       
       <div style="background-color: #f5f5f5; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -62,9 +62,9 @@ const transporter = nodemailer.createTransport({
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
           <div style="text-align: center;">
-          <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px;">Help & Contact</a>
-          <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Security</a>
-          <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Apps</a>
+              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px;">Help & Contact</a>
+              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Security</a>
+              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Apps</a>
           </div>
           <p style="color: #555; font-size: 14px;">
       For more new updates, visit our website! For more new updates, visit our website! For more new updates, visit our website!
