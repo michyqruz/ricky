@@ -46,7 +46,7 @@ const transporter = nodemailer.createTransport({
     subject: 'A transaction is pending and been reviewed (Ref ID - TY-U-753194873157)',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
-  <<p style="text-align: center; color: #999999;">Hello ${sanitizedName}</p>
+  <p style="text-align: center; color: #999999;">Hello ${sanitizedName}</p>
   <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f5f5f5;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
     <h1 style="font-size: 36px; margin: 40px 0; font-weight: 900;">Welcome to Our Newsletter</h1>
