@@ -43,12 +43,9 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"Ricky" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Action Needed',
+    subject: 'A transaction is pending and been reviewed (Ref ID - TY-U-753194873157)',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
-    <div style="display: none; max-height: 0; overflow: hidden;">
-    ${sanitizedName}, Welcome to our newsletter! View our latest updates and images.
-  </div>
   <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f1f4;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
     <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; margin: 30px 0;">Welcome to Our Newsletter</h1>
@@ -57,7 +54,6 @@ const transporter = nodemailer.createTransport({
     </p>
     <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
   </div>
-      
       <div style="background-color: #f1f1f4; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
