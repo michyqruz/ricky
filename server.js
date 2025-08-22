@@ -47,28 +47,32 @@ const transporter = nodemailer.createTransport({
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
     <div style="display: none; max-height: 0; overflow: hidden;">
-    Hey ${sanitizedName}. Transaction Pending...
+    ${sanitizedName}, Welcome to our newsletter! View our latest updates and images.
   </div>
-  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f2f4;">
+  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f1f4;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-    <h1 style="font-size: 28px; margin: 30px 0;">Welcome to Our Newsletter</h1>
+    <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; margin: 30px 0;">Welcome to Our Newsletter</h1>
     <p style="font-size: 18px; text-align: left; line-height: 1.5;">
       Hello ${sanitizedName},<br>Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
     </p>
     <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
   </div>
       
-      <div style="background-color: #f1f2f4; max-width: 600px; margin: 0 auto; padding: 20px;">
+      <div style="background-color: #f1f1f4; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
               <hr style="margin: 30px auto;">
-              <div style="display: flex; justify-content: center; gap: 2px;">
-                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px; border-right: 1px solid;">Help & Contact</a>
-                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px; border-right: 1px solid;">Security</a>
-                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px;">App</a>
-              </div>
-              <div>
-              </div>
+          </div>
+          <div style="text-align: center;">
+      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px;">Help & Contact</a>
+      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px; border-left: 1px solid;">Security</a>
+      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px; border-left: 1px solid;">Apps</a>
+          </div>
+          <div style="text-align: center; margin: 10px auto;">
+      <a href="#" style="margin-right: 10px;"><img src="https://simpleicons.org/icons/x.svg" alt="X" width="40" height="40" style="display: inline-block; vertical-align: middle; border-radius: 50%; border: 2px solid black;"></a>
+      <a href="#" style="margin-right: 10px;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg" alt="Instagram" width="40" height="40" style="display: inline-block; vertical-align: middle; border-radius: 50%; border: 2px solid black;"></a>
+      <a href="#" style="margin-right: 10px;"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/facebook.svg" alt="Facebook" width="40" height="40" style="display: inline-block; vertical-align: middle; border-radius: 50%; border: 2px solid black;"></a>
+      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" width="40" height="40" style="display: inline-block; vertical-align: middle; border-radius: 50%; border: 2px solid black;"></a>
           </div>
           <p style="color: #555; font-size: 14px;">
       For more new updates, visit our website! For more new updates, visit our website! For more new updates, visit our website!
