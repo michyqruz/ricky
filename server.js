@@ -46,23 +46,25 @@ const transporter = nodemailer.createTransport({
     subject: 'A transaction is pending and been reviewed (Ref ID - TY-U-753194873157)',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
-  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f1f4;">
+  <p style="text-align: center;">Hello ${sanitizedName}</p>
+  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f5f5f5;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-    <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 32px; margin: 30px 0;">Welcome to Our Newsletter</h1>
-    <p style="font-size: 18px; text-align: left; line-height: 1.5;">
-      Hello ${sanitizedName},<br>Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
+    <h1 style="font-size: 36px; margin: 40px 0;">Welcome to Our Newsletter</h1>
+    <p style="font-size: 20px; text-align: left; line-height: 1.5;">
+        Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
     </p>
-    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
+    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
   </div>
-      <div style="background-color: #f1f1f4; max-width: 600px; margin: 0 auto; padding: 20px;">
+      
+      <div style="background-color: #f5f5f5; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-              <hr style="margin: 30px auto;">
+              <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
           <div style="text-align: center;">
-      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px;">Help & Contact</a>
-      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px; border-left: 1px solid;">Security</a>
-      <a href="#" style="font-size: 14px; font-weight: bold; color: #1a73e8; text-decoration: none; padding: 0 10px; border-left: 1px solid;">Apps</a>
+      <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px;">Help & Contact</a>
+      <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Security</a>
+      <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Apps</a>
           </div>
           <div style="text-align: center; margin: 10px auto;">
       <a href="#" style="margin-right: 10px;"><img src="https://simpleicons.org/icons/x.svg" alt="X" width="40" height="40" style="display: inline-block; vertical-align: middle; border-radius: 50%; border: 2px solid black;"></a>
