@@ -47,19 +47,48 @@ const transporter = nodemailer.createTransport({
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
     <div style="display: none; max-height: 0; overflow: hidden;">
-    Welcome to our newsletter! View our latest updates and images.
+    Hey ${sanitizedName}. Transaction Pending...
   </div>
-  <div style="font-family: Arial, sans-serif; color: #000000; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f3f4f2;">
+  <div style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f2f4;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-    <h1 style="color: #333; font-size: 26px; margin: 30px 0;">Welcome to Our Newsletter</h1>
-    <p style="color: #555; font-size: 18px; text-align: left; line-height: 1.5;">
-      Dear ${sanitizedName}. Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
+    <h1 style="font-size: 28px; margin: 30px 0;">Welcome to Our Newsletter</h1>
+    <p style="font-size: 18px; text-align: left; line-height: 1.5;">
+      Hello ${sanitizedName},<br>Thank you for subscribing! Here's a test email with some thumbnail images. Here's a test email with some thumbnail images.
     </p>
-    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 10px; font-size: 16px; margin: 10px 0;">Visit Our Website</a>
-    <p style="color: #555; font-size: 14px;">
-      For more new updates, visit our website!
-    </p>
+    <a href="https://millxore.github.io/start/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0;">Explore</a>
   </div>
+      
+      <div style="background-color: #f1f2f4; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <div style="text-align: center;">
+              <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #3498db; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <hr style="margin: 30px auto;">
+              <div style="display: flex; justify-content: center; gap: 2px;">
+                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px; border-right: 1px solid;">Help & Contact</a>
+                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px; border-right: 1px solid;">Security</a>
+                  <a href="#" style="color: dodgerblue; text-decoration: none; padding: 0px 5px;">App</a>
+              </div>
+              <div>
+              </div>
+          </div>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website! For more new updates, visit our website! For more new updates, visit our website!
+          </p>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website!   
+          </p>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website! For more new updates, visit our website!
+          </p>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website!   
+          </p>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website!   
+          </p>
+          <p style="color: #555; font-size: 14px;">
+      For more new updates, visit our website! For more new updates, visit our website! For more new updates, visit our website!
+          </p>
+      </div>
 `
   };
 
