@@ -67,13 +67,13 @@ const transporter = nodemailer.createTransport({
               <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none; padding: 0 8px; border-left: 2px solid black;">Apps</a>
           </div>
           <p style="color: #555; font-size: 14px;">
-     We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn to identify phishing</a>
+     We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn to identify phishing</span>
           </p>
           <p style="color: #555; font-size: 14px;">
-      Please don't reply to this email. To get in touch with us, click <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none;">Help & Contact.</a>   
+      Please don't reply to this email. To get in touch with us, click <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Help & Contact.</span>   
           </p>
           <p style="color: #555; font-size: 14px;">
-      Not sure why you received this email? <a href="#" style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn more</a>
+      Not sure why you received this email? <span style="font-size: 12px; color: #1a73e8; text-decoration: none;">Learn more</span>
           </p>
           <p style="color: #555; font-size: 14px;">
       Copyright © 1999-2025. All rights reserved. 
