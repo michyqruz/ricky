@@ -50,6 +50,7 @@ const transporter = nodemailer.createTransport({
           <img src="https://cdn.pixabay.com/photo/2021/04/30/16/47/btc-logo-6219386_1280.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
           <h1 style="font-size: 32px;">Big text</h1>
           <p>Hello there, ${sanitizedName}!</p>
+          <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #f7b611; color: white; text-decoration: none; border-radius: 20px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
       </div>
       <div style="background-color: #f1f7f7; max-width: 500px; padding: 20px;">
           <div style="text-align: center;">
