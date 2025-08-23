@@ -51,7 +51,7 @@ const transporter = nodemailer.createTransport({
           <h1 style="font-size: 32px;">Big text</h1>
           <p>Hello there, ${sanitizedName}!</p>
       </div>
-      <div style="background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
+      <div style="background-color: #f1f7f7; max-width: 500px; padding: 20px;">
           <div style="text-align: center;">
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
