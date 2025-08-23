@@ -46,7 +46,7 @@ const transporter = nodemailer.createTransport({
     subject: 'Transaction confirmed (Ref ID - TY-U-753594873136)',
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
-  <<div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
               <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
