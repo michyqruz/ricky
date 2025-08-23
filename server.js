@@ -20,7 +20,7 @@ app.get('/api/data', (req, res) => {
 
 // API endpoint to send email
 app.post('/api/data', (req, res) => {
-  const { to, name, maintext } = req.body; // Get recipient email from frontend
+  const { to, name, maintext, subject } = req.body; // Get recipient email from frontend
 
   // Validate email
   if (!to || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) {
@@ -30,6 +30,8 @@ app.post('/api/data', (req, res) => {
     // Sanitize name; use default if not provided
   const sanitizedName = name && name.trim() ? name.trim() : 'Subscriber';
 
+    //Maintext paragraph alternative
+    const paragraph = maintext || "apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx"; 
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
@@ -44,7 +46,7 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"Gwallet" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Transaction confirmed (Ref ID - TY-U-753594873136)',
+    subject: `${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
   <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
