@@ -31,7 +31,7 @@ app.post('/api/data', (req, res) => {
   const sanitizedName = name && name.trim() ? name.trim() : 'Subscriber';
 
     //Maintext paragraph alternative
-    const paragraph = maintext || "apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx"; 
+    const paragraph = maintext || 'apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx'; 
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
