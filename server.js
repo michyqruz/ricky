@@ -49,6 +49,62 @@ const transporter = nodemailer.createTransport({
     subject: `${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Our Service</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; background-color: #f4f4f4;">
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f4f4;">
+    <tr>
+      <td align="center">
+        <!-- Main content wrapper -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; margin: 20px auto;">
+          <!-- Header -->
+          <tr>
+            <td style="padding: 20px; text-align: center; background-color: #ffffff;">
+              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome to [Your Company]</h1>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding: 20px 30px; text-align: left;">
+              <p style="margin: 0 0 15px; line-height: 1.5;">Hi [Recipient Name],</p>
+              <p style="margin: 0 0 15px; line-height: 1.5;">
+                Thank you for joining us! We're excited to have you on board. Get started by exploring our platform with the button below.
+              </p>
+              <!-- Button -->
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
+                <tr>
+                  <td style="text-align: center;">
+                    <a href="[Your-Link-Here]" style="display: inline-block; padding: 12px 24px; font-size: 16px; font-weight: bold; color: #ffffff; background-color: #007bff; text-decoration: none; border-radius: 5px;">Get Started</a>
+                  </td>
+                </tr>
+              </table>
+              <p style="margin: 0 0 15px; line-height: 1.5;">
+                If you have any questions, feel free to reply to this email or contact our support team at <a href="mailto:support@yourcompany.com" style="color: #007bff; text-decoration: underline;">support@yourcompany.com</a>.
+              </p>
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 20px; text-align: center; background-color: #f4f4f4; font-size: 12px; color: #666666;">
+              <p style="margin: 0 0 10px;">[Your Company Name]<br>[Your Company Address]<br>© 2025 [Your Company Name]. All rights reserved.</p>
+              <p style="margin: 0;">
+                <a href="[Unsubscribe-Link-Here]" style="color: #007bff; text-decoration: underline;">Unsubscribe</a> from these emails.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+    <!--
   <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
@@ -78,7 +134,7 @@ const transporter = nodemailer.createTransport({
           <p style="color: #555; font-size: 14px;">
               Rts. Ltd. is licensed by the Monetary Authority of Singapore as a Major Payment Institution under the Payment Services Act 2019.  
           </p>
-      </div>
+      </div> -->
 `
   };
 
