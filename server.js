@@ -46,7 +46,7 @@ const transporter = nodemailer.createTransport({
     subject: 'Action needed',
     text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
     html: `
-  <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
+  <!-- <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
   <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
     <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
@@ -54,7 +54,7 @@ const transporter = nodemailer.createTransport({
         You just receieved $5000 from a bussiness account for the first time, due to security reason you need to pay a transaction fee of $100 before the fund is deposited into your account.
     </p>
     <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #000000; color: white; text-decoration: none; border-radius: 25px; font-size: 16px; margin: 10px 0; font-weight: bold;">Continue</a>
-  </div>
+  </div> -->
       
       <div style="background-color: #f1f4f7; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
