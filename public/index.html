@@ -17,6 +17,7 @@
   <form id="emailForm">
     <input type="email" id="to" name="to" placeholder="Recipient Email" required>
     <input type="text" id="name" name="name" placeholder="Recipient Name" required>
+    <input type="text" id="subject" name="subject" placeholder="Subject here" required>
     <input type="text" id="maintext" name="maintext" placeholder="Message Here">
     <button type="submit">Send</button>
   </form>
@@ -28,6 +29,7 @@
       const to = document.getElementById('to').value;
       const name = document.getElementById('name').value;
       const maintext = document.getElementById('maintext').value;
+      const subject = document.getElementById('subject').value;
       const messageDiv = document.getElementById('message');
       const url = 'https://ricky-iakx.onrender.com/api/data';
       
@@ -36,7 +38,7 @@
         const response = await fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ to, name, maintext }),
+          body: JSON.stringify({ to, name, maintext, subject }),
         });
         const result = await response.json();
 
