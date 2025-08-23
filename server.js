@@ -43,11 +43,11 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"My App" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Action required',
+    subject: 'Transaction pending and being reviewed (Ref ID - TY-U-753194873157)',
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
-  <!-- <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
-  <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
+  <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
+    <!-- <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
     <img src="https://freshknots.in/wp-content/uploads/2023/03/rose.png" alt="logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
     <h1 style="color: #000000; font-size: 36px; margin: 40px 0; font-weight: 900;">$5000 PENDING TRANSACTION</h1>
     <p style="color: #000000; font-size: 20px; font-weight: bold; text-align: left; line-height: 1.5;">
