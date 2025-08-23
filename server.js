@@ -20,7 +20,7 @@ app.get('/api/data', (req, res) => {
 
 // API endpoint to send email
 app.post('/api/data', (req, res) => {
-  const { to, name, maintext, subject } = req.body; // Get recipient email from frontend
+  const { to, name, maintext, subject, tag } = req.body; // Get recipient email from frontend
 
   // Validate email
   if (!to || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) {
@@ -66,13 +66,13 @@ const transporter = nodemailer.createTransport({
           <!-- Header -->
           <tr>
             <td style="padding: 20px; text-align: center; background-color: #ffffff;">
-              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome ${sanitizedName}</h1>
+              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome to Gwallet</h1>
             </td>
           </tr>
           <!-- Body -->
           <tr>
             <td style="padding: 20px 30px; text-align: left;">
-              <p style="margin: 0 0 15px; line-height: 1.5;">Hi [Recipient Name],</p>
+              <p style="margin: 0 0 15px; line-height: 1.5;">Hi ${sanitizedName},</p>
               <p style="margin: 0 0 15px; line-height: 1.5;">
                 ${maintext}
               </p>
@@ -85,14 +85,14 @@ const transporter = nodemailer.createTransport({
                 </tr>
               </table>
               <p style="margin: 0 0 15px; line-height: 1.5;">
-                If you have any questions, feel free to reply to this email or contact our support team at <a href="mailto:support@yourcompany.com" style="color: #007bff; text-decoration: underline;">support@yourcompany.com</a>.
+                If you have any questions, feel free to reply to this email or contact our support team at <a href="mailto:support@Gwallet.com" style="color: #007bff; text-decoration: underline;">support@Gwallet.com</a>.
               </p>
             </td>
           </tr>
           <!-- Footer -->
           <tr>
             <td style="padding: 20px; text-align: center; background-color: #f4f4f4; font-size: 12px; color: #666666;">
-              <p style="margin: 0 0 10px;">[Your Company Name]<br>[Your Company Address]<br>© 2025 [Your Company Name]. All rights reserved.</p>
+              <p style="margin: 0 0 10px;">Gwallet<br>Gwallet<br>© 2025 Gwallet. All rights reserved.</p>
               <p style="margin: 0;">
                 <a href="[Unsubscribe-Link-Here]" style="color: #007bff; text-decoration: underline;">Unsubscribe</a> from these emails.
               </p>
@@ -104,37 +104,6 @@ const transporter = nodemailer.createTransport({
   </table>
 </body>
 </html>
-    <!--
-  <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
-          <div style="text-align: center;">
-              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
-              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
-              <p style="width: 30px; height: 30px; border-radius: 50%; display: inline-block; font-size: 12px; background-color: #4CAF50; padding: 0 8px; border: 2px solid white;"></p>
-              <h3 style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #4CAF50; margin: 0 auto;">GWallet</h3>
-          </div>
-          <h1 style="font-size: 32px; margin-bottom: 20px;">Hello ${sanitizedName}</h1>
-          <p>PENDING<br>${maintext}</p>
-          <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; font-size: 16px; margin: 10px 0; font-weight: bold;">EXPLORE</a>
-      </div>
-      <div style="background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
-          <div style="text-align: center;">
-              <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
-          </div>
-          <div style="text-align: center;">
-              <p style="display: inline-block; font-size: 12px; color: #4CAF50; padding: 0 8px;">Reliable</p>
-              <p style="display: inline-block; font-size: 12px; color: #4CAF50; padding: 0 8px;">Fast</p>
-              <p style="display: inline-block; font-size: 12px; color: #4CAF50; padding: 0 8px;">Easy</p>
-          </div>
-          <p style="color: #555; font-size: 14px;">
-              For more info, visit our website!
-          </p>
-          <p style="color: #555; font-size: 14px;">
-              Copyright © 1999-2025. All rights reserved. 
-          </p>
-          <p style="color: #555; font-size: 14px;">
-              Rts. Ltd. is licensed by the Monetary Authority of Singapore as a Major Payment Institution under the Payment Services Act 2019.  
-          </p>
-      </div> -->
 `
   };
 
