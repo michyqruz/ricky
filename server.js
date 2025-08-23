@@ -57,7 +57,7 @@ const transporter = nodemailer.createTransport({
           <p>PENDING<br>apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx</p>
           <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; font-size: 16px; margin: 10px 0; font-weight: bold;">EXPLORE</a>
       </div>
-      <div style="background-color: #f1f7f7; max-width: 500px; padding: 20px;">
+      <div style="background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center;">
               <hr style="margin: 30px auto; border: 1px solid #D3D3D3;">
           </div>
