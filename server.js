@@ -43,7 +43,7 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"Gwallet" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Transaction confirmed (Ref ID - TY-U-753194873159)',
+    subject: 'Transaction confirmed (Ref ID - TY-U-753594873159)',
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
   <div style="text-align: center; background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
