@@ -43,8 +43,8 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"My App" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: 'Action needed',
-    text: `Welcome to Our Newsletter. ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://example.com`,
+    subject: 'Action required',
+    text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
   <!-- <p style="text-align: center; color: #999999; font-size: 12px;">Hello ${sanitizedName}</p>
   <div style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; text-align: center; padding: 20px; background-color: #f1f4f7;">
