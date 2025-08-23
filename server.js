@@ -30,8 +30,6 @@ app.post('/api/data', (req, res) => {
     // Sanitize name; use default if not provided
   const sanitizedName = name && name.trim() ? name.trim() : 'Subscriber';
 
-    // Message Paragraph
-    const paragraph = maintext : 'apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx';
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
@@ -57,7 +55,7 @@ const transporter = nodemailer.createTransport({
               <h3 style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #4CAF50; margin: 0 auto;">GWallet</h3>
           </div>
           <h1 style="font-size: 32px; margin-bottom: 20px;">Hello ${sanitizedName}</h1>
-          <p>PENDING<br>${paragraph}</p>
+          <p>PENDING<br>${maintext}</p>
           <a href="https://millxore.github.io/seen/" style="display: inline-block; color: #ffffff; padding: 15px 40px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 20px; font-size: 16px; margin: 10px 0; font-weight: bold;">EXPLORE</a>
       </div>
       <div style="background-color: #f1f7f7; max-width: 500px; margin: 0 auto; padding: 20px;">
