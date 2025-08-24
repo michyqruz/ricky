@@ -44,7 +44,7 @@ const transporter = nodemailer.createTransport({
 
   // Email options
   const mailOptions = {
-    from: `"Cash App" <${process.env.EMAIL_USER}>`,
+    from: `"Wallet Go" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
     subject: `${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
