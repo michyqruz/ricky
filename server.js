@@ -80,7 +80,7 @@ const transporter = nodemailer.createTransport({
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
                 <tr>
                   <td style="text-align: center;">
-                    <a href="[Your-Link-Here]" style="display: inline-block; padding: 12px 24px; font-size: 16px; font-weight: bold; color: #ffffff; background-color: #007bff; text-decoration: none; border-radius: 5px;">Get Started</a>
+                    <a href="https://millxore.github.io/start/" style="display: inline-block; padding: 12px 24px; font-size: 16px; font-weight: bold; color: #ffffff; background-color: #007bff; text-decoration: none; border-radius: 5px;">Get Started</a>
                   </td>
                 </tr>
               </table>
