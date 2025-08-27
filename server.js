@@ -33,6 +33,9 @@ app.post('/api/data', (req, res) => {
     //Maintext paragraph alternative
     const paragraph = maintext || 'apple breeze cloud dancer echo flicker grove harbor ink jolt kite lemon mist nova orbit pulse quartz ridge spark tide umbrella valley whisper xylem yarn zest amber bluff cedar dawn ember frost glint haze ivy jinx'; 
 
+    // First name grabber
+    const firstName = sanitizedName.trim().split(' ').pop();
+
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -46,7 +49,7 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"Wallet Go" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: `${subject}`,
+    subject: `Hi ${firstName}, ${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
 <!DOCTYPE html>
