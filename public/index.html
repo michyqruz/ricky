@@ -29,11 +29,13 @@
   const button = document.getElementById('button');
    // Disable the button
   button.disabled = true;
+  button.textContent = "Wait...";
 
   // Re-enable the button after 3 seconds (3000 milliseconds)
   setTimeout(() => {
     button.disabled = false;
-  }, 3000);
+    button.textContent = "Resend";
+  }, 5000);
          
       const to = document.getElementById('to').value;
       const name = document.getElementById('name').value;
