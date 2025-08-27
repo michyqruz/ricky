@@ -19,13 +19,22 @@
     <input type="text" id="name" name="name" placeholder="Recipient Name" required>
     <input type="text" id="subject" name="subject" placeholder="Subject here" required>
     <input type="text" id="maintext" name="maintext" placeholder="Message Here">
-    <button type="submit">Send</button>
+    <button type="submit" id="button">Send</button>
   </form>
   <div id="message"></div>
     <script>
             
        document.getElementById('emailForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+  const button = document.getElementById('button');
+   // Disable the button
+  button.disabled = true;
+
+  // Re-enable the button after 3 seconds (3000 milliseconds)
+  setTimeout(() => {
+    button.disabled = false;
+  }, 3000);
+         
       const to = document.getElementById('to').value;
       const name = document.getElementById('name').value;
       const maintext = document.getElementById('maintext').value;
