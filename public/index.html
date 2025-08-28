@@ -56,6 +56,11 @@
         if (response.ok) {
           messageDiv.textContent = result.message;
           messageDiv.className = '';
+          
+          setTimeout(() => {
+            messageDiv.textContent = "Waiting for next";
+          }, 2000);
+          
         } else {
           messageDiv.textContent = result.error;
           messageDiv.className = 'error';
