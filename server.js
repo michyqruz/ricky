@@ -49,7 +49,7 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: `"Wallet Go" <${process.env.EMAIL_USER}>`,
     to: to, // Recipient email from frontend
-    subject: `Hi ${firstName}: ${subject}`,
+    subject: `${subject}`,
     text: `Hello ${sanitizedName}!\n\nThank you for subscribing! This email contains updates and images in HTML format, but your email client is displaying the plain-text version. Visit our website for more information: https://x.com`,
     html: `
 <!DOCTYPE html>
@@ -69,13 +69,13 @@ const transporter = nodemailer.createTransport({
           <!-- Header -->
           <tr>
             <td style="padding: 20px; text-align: center; background-color: #ffffff;">
-              <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome to Gwallet</h1>
+              <!-- <h1 style="font-size: 24px; margin: 0; color: #333333;">Welcome to Gwallet</h1> -->
             </td>
           </tr>
           <!-- Body -->
           <tr>
             <td style="padding: 20px 30px; text-align: left;">
-              <p style="margin: 0 0 15px; line-height: 1.5;">Hi ${sanitizedName},</p>
+              <!-- <p style="margin: 0 0 15px; line-height: 1.5;">Hi ${sanitizedName},</p> -->
               <p style="margin: 0 0 15px; line-height: 1.5;">
                 ${maintext}
               </p>
