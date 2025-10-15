@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Forms with Telegram</title>
+    <style>
+        .form-container {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        input, select, textarea {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .loading {
+            display: none;
+            color: #007bff;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form1" class="form-container active">
+        <h3>Form 1: Personal Information</h3>
+        <form id="personalForm">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit" id="submitBtn1">
+                Next 
+                <span class="loading" id="loading1">Sending...</span>
+            </button>
+        </form>
+    </div>
+
+    <div id="form2" class="form-container">
+        <h3>Form 2: Address Information</h3>
+        <form id="addressForm">
+            <input type="text" name="street" placeholder="Street Address" required>
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="zipcode" placeholder="Zip Code" required>
+            <button type="submit" id="submitBtn2">
+                Next 
+                <span class="loading" id="loading2">Sending...</span>
+            </button>
+        </form>
+    </div>
+
+    <div id="form3" class="form-container">
+        <h3>Form 3: Preferences</h3>
+        <form id="preferencesForm">
+            <select name="newsletter" required>
+                <option value="">Subscribe to newsletter?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <textarea name="comments" placeholder="Additional comments"></textarea>
+            <button type="submit" id="submitBtn3">
+                Submit All Forms 
+                <span class="loading" id="loading3">Sending...</span>
+            </button>
+        </form>
+    </div>
+
+    <div id="successMessage" style="display: none;">
+        <h3>Thank you! All forms have been submitted.</h3>
+    </div>
+
+    <script>
+        // Telegram Bot Configuration
+        const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+        const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+        
+        let allFormData = {};
+
+        // Form 1 submission
+        document.getElementById('personalForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn1');
+            const loading = document.getElementById('loading1');
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            loading.style.display = 'inline';
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Store data
+            Object.assign(allFormData, data);
+            
+            // Send to Telegram
+            const message = `📝 **Form 1 Submitted - Personal Information**\n\n` +
+                           `👤 Name: ${data.name}\n` +
+                           `📧 Email: ${data.email}\n` +
+                           `⏰ Time: ${new Date().toLocaleString()}`;
+            
+            const success = await sendToTelegram(message);
+            
+            if (success) {
+                showForm('form2');
+            } else {
+                alert('Failed to send form data. Please try again.');
+            }
+            
+            // Re-enable button and hide loading
+            submitBtn.disabled = false;
+            loading.style.display = 'none';
+        });
+
+        // Form 2 submission
+        document.getElementById('addressForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn2');
+            const loading = document.getElementById('loading2');
+            
+            submitBtn.disabled = true;
+            loading.style.display = 'inline';
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Store data
+            Object.assign(allFormData, data);
+            
+            // Send to Telegram
+            const message = `📝 **Form 2 Submitted - Address Information**\n\n` +
+                           `🏠 Street: ${data.street}\n` +
+                           `🏙️ City: ${data.city}\n` +
+                           `📮 Zip Code: ${data.zipcode}\n` +
+                           `⏰ Time: ${new Date().toLocaleString()}`;
+            
+            const success = await sendToTelegram(message);
+            
+            if (success) {
+                showForm('form3');
+            } else {
+                alert('Failed to send form data. Please try again.');
+            }
+            
+            submitBtn.disabled = false;
+            loading.style.display = 'none';
+        });
+
+        // Form 3 submission
+        document.getElementById('preferencesForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn3');
+            const loading = document.getElementById('loading3');
+            
+            submitBtn.disabled = true;
+            loading.style.display = 'inline';
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Store data
+            Object.assign(allFormData, data);
+            
+            // Send to Telegram
+            const message = `📝 **Form 3 Submitted - Preferences**\n\n` +
+                           `📰 Newsletter: ${data.newsletter}\n` +
+                           `💬 Comments: ${data.comments || 'None'}\n` +
+                           `⏰ Time: ${new Date().toLocaleString()}\n\n` +
+                           `✅ **All Forms Completed!**`;
+            
+            const success = await sendToTelegram(message);
+            
+            if (success) {
+                // Send summary of all data
+                const summaryMessage = `📊 **Complete Form Submission Summary**\n\n` +
+                                     `👤 Personal Info:\n` +
+                                     `   • Name: ${allFormData.name}\n` +
+                                     `   • Email: ${allFormData.email}\n\n` +
+                                     `🏠 Address Info:\n` +
+                                     `   • Street: ${allFormData.street}\n` +
+                                     `   • City: ${allFormData.city}\n` +
+                                     `   • Zip Code: ${allFormData.zipcode}\n\n` +
+                                     `⚙️ Preferences:\n` +
+                                     `   • Newsletter: ${allFormData.newsletter}\n` +
+                                     `   • Comments: ${allFormData.comments || 'None'}`;
+                
+                await sendToTelegram(summaryMessage);
+                showSuccessMessage();
+            } else {
+                alert('Failed to send form data. Please try again.');
+            }
+            
+            submitBtn.disabled = false;
+            loading.style.display = 'none';
+        });
+
+        // Function to send message to Telegram
+        async function sendToTelegram(message) {
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                });
+                
+                const result = await response.json();
+                return result.ok;
+            } catch (error) {
+                console.error('Error sending to Telegram:', error);
+                return false;
+            }
+        }
+
+        function showForm(formId) {
+            // Hide all forms
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.classList.remove('active');
+            });
+            // Show the specified form
+            document.getElementById(formId).classList.add('active');
+        }
+
+        function showSuccessMessage() {
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.style.display = 'none';
+            });
+            document.getElementById('successMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
